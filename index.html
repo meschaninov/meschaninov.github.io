@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sibereum - Business Card</title>
+  <title>Sibereum - Terminal Business Card</title>
   <style>
     :root {
-      --bg: #0c0f0c;
-      --panel: #101510;
-      --text: #b7f7b7;
-      --accent: #6cff6c;
-      --muted: #7bb07b;
-      --border: #2a3a2a;
+      --bg: #000000;
+      --panel: #050505;
+      --text: #e6e6e6;
+      --accent: #ffffff;
+      --muted: #9a9a9a;
+      --border: #1f1f1f;
     }
 
     * {
@@ -23,9 +23,9 @@
       min-height: 100vh;
       display: grid;
       place-items: center;
-      background: radial-gradient(circle at top, #111811 0%, var(--bg) 60%);
+      background: radial-gradient(circle at top, #121212 0%, var(--bg) 60%);
       color: var(--text);
-      font: 16px/1.5 Menlo, Monaco, Consolas, "Courier New", monospace;
+      font: 16px/1.2 Menlo, Monaco, Consolas, "Courier New", monospace;
       padding: 24px;
     }
 
@@ -44,7 +44,7 @@
       gap: 8px;
       padding: 10px 14px;
       border-bottom: 1px solid var(--border);
-      background: #0d120d;
+      background: #0a0a0a;
     }
 
     .dot {
@@ -75,22 +75,22 @@
     }
 
     .line {
-      margin: 0 0 6px;
+      margin: 0;
     }
 
     .line--spacer {
-      margin-bottom: 12px;
+      margin-bottom: 2px;
     }
 
     a {
-      color: #89f989;
+      color: #f2f2f2;
       text-decoration: none;
-      border-bottom: 1px dashed #4d8a4d;
+      border-bottom: 1px dashed #5a5a5a;
     }
 
     a:hover {
-      color: #b9ffb9;
-      border-bottom-color: #8fcb8f;
+      color: #ffffff;
+      border-bottom-color: #9a9a9a;
     }
   </style>
 </head>
@@ -104,15 +104,78 @@
     </div>
     <div class="terminal__body">
       <p class="line"><span class="prompt">sibereum@portfolio:~$</span> whoami</p>
-      <p class="line">Sibereum (Artyom Meschaninov)</p>
-      <p class="line line--spacer"><span class="prompt">sibereum@portfolio:~$</span> cat contacts.txt</p>
-      <p class="line">Telegram: <a href="https://t.me/sibereum" target="_blank" rel="noopener noreferrer">https://t.me/sibereum</a></p>
-      <p class="line">VK: <a href="https://vk.com/sibereum" target="_blank" rel="noopener noreferrer">https://vk.com/sibereum</a></p>
-      <p class="line">Discord: sibereum</p>
+      <p class="line">Артём Мещанинов (@sibereum)</p>
+      <p class="line">Backend Разработчик</p>
+      <p class="line">Норильск, Россия</p>
+      <p class="line line--spacer">Возраст: <span id="age-years">--</span> лет</p>
+
+      <p class="line"><span class="prompt">sibereum@portfolio:~$</span> cat contacts.txt</p>
       <p class="line">Email: <a href="mailto:meschaninov53@gmail.com">meschaninov53@gmail.com</a></p>
-      <p class="line line--spacer"><span class="prompt">sibereum@portfolio:~$</span> echo "Have a nice day!"</p>
-      <p class="line">Have a nice day!</p>
+      <p class="line">Telegram: <a href="https://t.me/sibereum" target="_blank" rel="noopener noreferrer">https://t.me/sibereum</a></p>
+      <p class="line">GitHub: <a href="https://github.com/meschaninov" target="_blank" rel="noopener noreferrer">https://github.com/meschaninov</a></p>
+      <p class="line">VK: <a href="https://vk.com/sibereum" target="_blank" rel="noopener noreferrer">https://vk.com/sibereum</a></p>
+      <p class="line line--spacer">Discord: sibereum</p>
+
+      <p class="line"><span class="prompt">sibereum@portfolio:~$</span> cat education.txt</p>
+      <p class="line">[1] Бакалавриат, "Информационные системы и программирование"</p>
+      <p class="line">    Высшее образование, <span id="bachelor-course">--</span> курс</p>
+      <p class="line">    2025 — 2029</p>
+      <p class="line">[2] СПО, "Обслуживание электрического и электромеханического оборудования"</p>
+      <p class="line">    Среднее профессиональное образование</p>
+      <p class="line line--spacer">    2021 — 2025</p>
+
+      <p class="line"><span class="prompt">sibereum@portfolio:~$</span> cat experience.log</p>
+      <p class="line">[1] Network Graphics (06.2023 — сейчас)</p>
+      <p class="line">    Специалист технической поддержки &amp; PR-ассистент</p>
+      <p class="line">    <a href="https://ntw.graphics" target="_blank" rel="noopener noreferrer">https://ntw.graphics</a></p>
+      <p class="line">[2] FiveMods (09.2023 — сейчас)</p>
+      <p class="line">    Специалист технической поддержки &amp; PR-ассистент</p>
+      <p class="line">    <a href="https://fivemods.io" target="_blank" rel="noopener noreferrer">https://fivemods.io</a></p>
+      <p class="line">[3] Ultimate Rust (03.2023 — сейчас)</p>
+      <p class="line">    Технический администратор &amp; Backend Разработчик</p>
+      <p class="line line--spacer">    <a href="https://ultimaterust.com" target="_blank" rel="noopener noreferrer">https://ultimaterust.com</a></p>
+
+      <p class="line"><span class="prompt">sibereum@portfolio:~$</span> cat skills.txt</p>
+      <p class="line">Hard: Python, JavaScript, Vue, Express, FastAPI, REST API, PostgreSQL, MySQL, MongoDB, Git, Docker</p>
+      <p class="line">Soft: Люблю изучать новые технологии, особенно те, что используются в крупных продуктах</p>
+      <p class="line">Soft: Быстро встраиваюсь в стек проекта и адаптируюсь под процессы</p>
+      <p class="line line--spacer">Soft: Опыт работы с иностранной аудиторией (EU &amp; US)</p>
+
+      <p class="line"><span class="prompt">sibereum@portfolio:~$</span> cat projects.md</p>
+      <p class="line">[1] Task Manager</p>
+      <p class="line">    Сервис для планирования задач в команде (аналог Jira), делал для университета, по итогу система интегрировалась в Ultimate Rust.</p>
+      <p class="line">    Stack: JavaScript, Vue, Express, MongoDB</p>
+      <p class="line">    GitHub: <a href="https://github.com/meschaninov" target="_blank" rel="noopener noreferrer">https://github.com/meschaninov</a></p>
+      <p class="line">    Live: <a href="https://tasks.ultimaterust.com" target="_blank" rel="noopener noreferrer">https://tasks.ultimaterust.com</a></p>
+      <p class="line">[2] ISIT Checker</p>
+      <p class="line">    Сервис создан для учета посещаемости студентов в университете. В данный момент активно используются на кафедрах.</p>
+      <p class="line">    Stack: Python, Aiogram, MongoDB</p>
+      <p class="line">    GitHub: <a href="https://github.com/meschaninov" target="_blank" rel="noopener noreferrer">https://github.com/meschaninov</a></p>
+      <p class="line line--spacer">    Live: <a href="https://t.me/isit_robot" target="_blank" rel="noopener noreferrer">https://t.me/isit_robot</a></p>
+
+      <p class="line"><span class="prompt">sibereum@portfolio:~$</span> echo "Done."</p>
+      <p class="line">Done.</p>
     </div>
   </main>
+  <script>
+    const birthDate = new Date(2005, 2, 5);
+    const now = new Date();
+    let ageYears = now.getFullYear() - birthDate.getFullYear();
+    const monthDiff = now.getMonth() - birthDate.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < birthDate.getDate())) {
+      ageYears -= 1;
+    }
+    document.getElementById("age-years").textContent = String(ageYears);
+
+    const bachelorStartYear = 2025;
+    const bachelorDurationYears = 4;
+    let bachelorCourse = now.getFullYear() - bachelorStartYear;
+    if (now.getMonth() >= 8) {
+      bachelorCourse += 1;
+    }
+    if (bachelorCourse < 1) bachelorCourse = 1;
+    if (bachelorCourse > bachelorDurationYears) bachelorCourse = bachelorDurationYears;
+    document.getElementById("bachelor-course").textContent = String(bachelorCourse);
+  </script>
 </body>
 </html>
